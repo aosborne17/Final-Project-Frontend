@@ -19,8 +19,8 @@ def base():
         aws_secret_access_key=os.environ["AWS_SECRET_KEY"]
     )
 
-    s3_client.download_file('eng-67-shahrukh-devops', 'ItJobsWatchTop30Manual.csv',
-                            'Downloads/ItJobsWatchTop30Manual.csv')
+    s3_client.download_file('eng-67-shahrukh-devops', 'ItJobsWatchTop30.csv',
+                            'Downloads/ItJobsWatchTop30.csv')
 
     return render_template("new_homepage.html")
 
