@@ -20,7 +20,7 @@ def base():
     )
 
     s3_client.download_file('eng-67-shahrukh-devops', 'ItJobsWatchTop30.csv',
-                            'Downloads/ItJobsWatchTop30.csv')
+                            '/usr/src/app/Flask/Downloads/ItJobsWatchTop30.csv')
 
     return render_template("new_homepage.html")
 
