@@ -6,6 +6,7 @@ import boto3
 import os
 
 PORT=5000
+
 app = Flask(__name__)
 
 
@@ -32,7 +33,7 @@ def meet_team():
 
 @app.route("/data", methods=['GET'])
 def data():
-    with open('Downloads/ItJobsWatchTop30.csv') as csv_file:
+    with open('ItJobsWatchTop30.csv') as csv_file:
         data = csv.reader(csv_file, delimiter=',')
         jobs = []
         no1job = []
