@@ -12,16 +12,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def base():
-    ACCESS_KEY = os.environ["AWS_ACCESS_KEY"]
-    SECRET_KEY = os.environ["AWS_SECRET_KEY"]
-
-    session = Session(aws_access_key_id=ACCESS_KEY,
-                      aws_secret_access_key=SECRET_KEY)
-    s3 = session.resource('s3')
-    your_bucket = s3.Bucket('eng-67-shahrukh-devops')
-
-    for s3_file in your_bucket.objects.all():
-        print(s3_file.key)  # prints the contents of bucket
 
     s3_client = boto3.client(
         's3',
