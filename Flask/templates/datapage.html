@@ -117,14 +117,14 @@ type="submit">
     {% for job in jobs %}
     <div class="col-lg-3 col-md-4 mb-4">
         <div class="card h-100">
-          <div class="card-body" style="background-color: #888484">
+          <div class="card-body" style="background-color: #36668f">
             <h4 class="card-title"> <span class="font-weight-bold"> {{ job.role }} </span> <br> Rank {{ job.rank }} </h4>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item" style="background-color: #888484">Rank Changed: {{ job.rank_move }}</li>
-              <li class="list-group-item" style="background-color: #888484">Median Salary(£): {{ job.median_salary }}</li>
-              <li class="list-group-item" style="background-color: #888484">Median Salary(%): {{ job.median_percentage }}</li>
-              <li class="list-group-item" style="background-color: #888484">Historical Ads: {{ job.hist_ads }}</li>
-              <li class="list-group-item" style="background-color: #888484">Current Ads: {{ job.live_ads }}</li>
+              <li class="list-group-item" style="background-color: #477092">Rank Changed: {{ job.rank_move }}</li>
+              <li class="list-group-item" style="background-color: #4770a0">Median Salary(£): {{ job.median_salary }}</li>
+              <li class="list-group-item" style="background-color: #4770b4">Median Salary(%): {{ job.median_percentage }}</li>
+              <li class="list-group-item" style="background-color: #4770a7">Historical Ads: {{ job.hist_ads }}</li>
+              <li class="list-group-item" style="background-color: #4770a8">Current Ads: {{ job.live_ads }}</li>
             </ul>
           </div>
         </div>

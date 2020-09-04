@@ -10,7 +10,6 @@ PORT=5000
 app = Flask(__name__)
 
 
-
 @app.route("/")
 def base():
 
@@ -41,7 +40,12 @@ def data():
         no3job = []
         counter = 1
         for row in data:
+            # Skip the headers in the CSV file
             if counter == 1:
+                counter += 1
+                continue
+            # Prepare 1st, 2nd and 3rd top results
+            elif counter == 2:
                 no1job.append({
                     "role": row[0],
                     "rank": row[1],
@@ -53,7 +57,7 @@ def data():
                 })
                 counter += 1
                 continue
-            elif counter == 2:
+            elif counter == 3:
                 no2job.append({
                     "role": row[0],
                     "rank": row[1],
@@ -65,7 +69,7 @@ def data():
                 })
                 counter += 1
                 continue
-            elif counter == 3:
+            elif counter == 4:
                 no3job.append({
                     "role": row[0],
                     "rank": row[1],
