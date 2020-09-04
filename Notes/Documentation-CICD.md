@@ -30,23 +30,23 @@ Go to Amazon Web Services Console and navigate to the EC2 Service, from there se
 
 Then Choose the **Ubuntu 16.04 LTS (HVM)** on **64-bit(x86)**.
 
-![Image_of_step1_creating_EM2](img/Step_1_EM2_Setup.PNG)
+![Image_of_step1_creating_EM2](../img/Step_1_EM2_Setup.PNG)
 
 Now Choose the **t2.micro** type, this is big enough as we are only running small jobs on our server.
 
-![Image_of_step2_creating_EM2](img/Step_2_EM2_Setup.PNG)
+![Image_of_step2_creating_EM2](../img/Step_2_EM2_Setup.PNG)
 
 Configure the instance so it is attached to a VPC, Subnet and Auto-assign public IP. Make sure you attach it to your own VPC if you have one.
 
-![Image_of_step3_creating_EM2](img/Step_3_EM2_Setup.PNG)
+![Image_of_step3_creating_EM2](../img/Step_3_EM2_Setup.PNG)
 
 For storage, leave it as it is as this is enough for our server. If it was bigger 8GB may not be enough.
 
-![Image_of_step4_creating_EM2](img/Step_4_EM2_Setup.PNG)
+![Image_of_step4_creating_EM2](../img/Step_4_EM2_Setup.PNG)
 
 Now give the Instance a memorable and meaningful name as this is what it will appear as in the instances dropdown.
 
-![Image_of_step5_creating_EM2](img/Step_5_EM2_Setup.PNG)
+![Image_of_step5_creating_EM2](../img/Step_5_EM2_Setup.PNG)
 
 For the Security Group, you need to create a set of necessary inbound and outbound rules. These will allow access into our server with specific access rights. I already had a pre-made security group so I used that but you can go ahead and create your own.
 
@@ -79,15 +79,15 @@ The Security group rules should look like so:
 
 _This is me selecting an existing Security Group_.
 
-![Image_of_step6_creating_EM2](img/Step_6_EM2_Setup.PNG)
+![Image_of_step6_creating_EM2](../img/Step_6_EM2_Setup.PNG)
 
 Now launch the instance, and choose a key that will be used to SSH into the instance later on to set it up. In this case I chose the DevOpsStudentKey
 
-![Image_of_step7_creating_EM2](img/Step_7_EM2_Setup.PNG)
+![Image_of_step7_creating_EM2](../img/Step_7_EM2_Setup.PNG)
 
 Now we should be able to view our instance in the main menu, we can also get the IP if we click it and copy the public IPv4 address. Copy this address for now as we will need it in the next step.
 
-![Image_of_step8_creating_EM2](img/Step_8_EM2_Setup.PNG)
+![Image_of_step8_creating_EM2](../img/Step_8_EM2_Setup.PNG)
 
 Now go into a unix-based terminal on your system, in my case the GitBash Terminal. and write the following command. Make sure you have the corresponding key you set in the `.ssh` folder.
 
@@ -117,7 +117,7 @@ sudo systemctl status jenkins
 
 This should then display a success message like the one below, if the server has been successfully installed.
 
-![Image_of_step9_creating_EM2](img/Step_9_EM2_Setup.PNG)
+![Image_of_step9_creating_EM2](../img/Step_9_EM2_Setup.PNG)
 
 Lastly, we need to add a docker socket into our Jenkins server. this is to ensure it will be compatiable with docker.
 
@@ -145,11 +145,11 @@ We are going to set up the Jenkins Server in our browser in the next step...
 
 ### Video 1 - Setting up Jenkins EC2 on AWS
 
-![Gif1_Settingup_jenkins_onAWS](img/GifOfEM2ONAWS.gif)
+![Gif1_Settingup_jenkins_onAWS](../img/GifOfEM2ONAWS.gif)
 
 ### Video 2 - Setting up Jenkins Automation Server
 
-![Gif2_Settingup_Jenkins_insideEM2](img/GifOfINSTALLONJENKINS.gif)
+![Gif2_Settingup_Jenkins_insideEM2](../img/GifOfINSTALLONJENKINS.gif)
 
 commands run in this video 
 ```bash
@@ -179,11 +179,11 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 It will be a random string, copy it and then navigate to the server in the browser with your IP like so: _192.312.131.12:8080_.
 
-![Step1_Of_Jenkins](img/Step_1_Jenkins_Setup.PNG)
+![Step1_Of_Jenkins](../img/Step_1_Jenkins_Setup.PNG)
 
 Now install the suggested plugins for Jenkins, wait until they are installed...
 
-![Step2_Of_Jenkins](img/Step_2_Jenkins_Setup.PNG)
+![Step2_Of_Jenkins](../img/Step_2_Jenkins_Setup.PNG)
 
 Now navigate to **Manage Jenkins > Plugin Manager** and install _Docker pipeline_ and _Docker_. As these will be needed later to work with Docker.
 
